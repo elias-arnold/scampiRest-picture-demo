@@ -1,0 +1,28 @@
+{
+  "name": "scampiRest-picture-demo",
+  "homepage": "https://github.com/elias-arnold/scampiRest-picture-demo",
+  "description": "Demo project to test the scampi Rest api",
+  "main": "App/app.js",
+  "moduleType": [],
+  "keywords": [
+    "scampi",
+    "demo"
+  ],
+  "authors": [
+    "elias.arnold@tum.de"
+  ],
+  "license": "Apache 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "angular": "angularjs#~1.4.8",
+    "pure": "~0.6.0"
+  }
+}
