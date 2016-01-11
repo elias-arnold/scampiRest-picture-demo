@@ -1,11 +1,14 @@
 'use strict';
 
+var restUrl = "http://localhost/dyn/";
+
 // Declare app level module which depends on views, and components
-angular.module('scampiRestPictureDemo', [
+var app = angular.module('scampiRestPictureDemo', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  'myApp.messageFeed',
+  'myApp.pictureUpload'
+]);
+
+app.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/feed'});
 }]);
