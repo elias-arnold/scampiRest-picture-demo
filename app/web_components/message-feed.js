@@ -11,6 +11,8 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 	$scope.messages = {};
+	
+
 	$scope.getMessages = function (){
 		var request = {
 	            method:  'GET',
@@ -26,8 +28,22 @@ app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 	}
 	$scope.getMessages();
 	
+	$scope.getPictures = function(binaryMap){
+		var paths = [];
+		for(var k in binaryMap) {
+			if (k !== "main") {
+				paths.push(binaryMap[k])
+			};
+		};
+		return paths;
+	}
+
 	$scope.getPath = function (binaryName, message){
 		var path = message.binaryMap[ binaryName ];
 		return "http://localhost/" + path;
 	}
+
+	$scope.isPicture = function(pic) {
+    	return binaryPath !== "main";
+	};
 }]);
