@@ -14,7 +14,7 @@ app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 	$scope.getMessages = function (){
 		var request = {
 	            method:  'GET',
-	            url:     restUrl + 'service/' + 'test-3-1',
+	            url:     restUrl + 'service/' + serviceName,
 	            headers: {'Content-Type' : 'application/json'}
 	        };
         $http(request).success(function (data) {
@@ -28,6 +28,6 @@ app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 	
 	$scope.getPath = function (binaryName, message){
 		var path = message.binaryMap[ binaryName ];
-		return "http://localhost/" + path + binaryName;
+		return "http://localhost/" + path;
 	}
 }]);
