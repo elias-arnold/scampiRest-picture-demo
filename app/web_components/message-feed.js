@@ -43,7 +43,4 @@ app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 		return "http://localhost/" + path;
 	}
 
-	$scope.isPicture = function(pic) {
-    	return binaryPath !== "main";
-	};
 }]);
