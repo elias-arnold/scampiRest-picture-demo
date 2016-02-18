@@ -40,7 +40,7 @@ app.controller('feedCtrl', ['$scope', '$http', function($scope,$http) {
 
 	$scope.getPath = function (binaryName, message){
 		var path = message.binaryMap[ binaryName ];
-		return "http://localhost/" + path;
+		return "http://myliberouter.org/" + path;
 	}
 
 }]);

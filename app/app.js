@@ -1,6 +1,6 @@
 'use strict';
 
-var restUrl = "http://localhost/dyn/";
+var restUrl = "http://myliberouter.org/dyn/";
 var serviceName = "test-3-1";
 
 // Declare app level module which depends on views, and components
