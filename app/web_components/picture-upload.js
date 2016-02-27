@@ -85,5 +85,21 @@ app.controller('pictureCtrl', ['$scope','$http','Upload',
 						console.log(data);
 					});
 			};
+			
+			$scope.publish = function(){
+				var request = {
+						method : 'GET',
+						url : restUrl + 'message/publish/' + $scope.myUpload.id,
+						headers : {
+							'Content-Type' : 'application/json'
+						},
+					};
+					$http(request).success(function(data) {
+						console.log('Sucess publishing message');
+					}).error(function(data) {
+						console.log('Error retrieving messages');
+						console.log(data);
+					});
+			}
 
 		} ]);
